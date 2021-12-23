@@ -5,16 +5,13 @@ error_reporting(0);
 include("../php/page_header.php");
 include("../config.php");
 
-$name = $_POST['donor_name'];
-$s = "select * from donor where name = '$name";
-
 //Databse Connection file
 if (isset($_POST['upload'])) {
     //getting the post values
     $picture = $_FILES['picture']['name'];
     $donation = $_POST['donation'];
     $description = $_POST['description'];
-    $name = $_SESSION['name'];
+    $name = $_SESSION['donor_name'];
     $email = $_SESSION['donor_email'];
     // get the image extension
     $extension = substr($picture, strlen($picture) - 4, strlen($picture));
@@ -51,14 +48,14 @@ if (isset($_POST['upload'])) {
 
             <label for="picture">Picture:</label>
             <div class="form-group">
-                <input type="file" class="form-control" name="picture" required="true">
+                <input type="file" class="form-control" name="picture" multiple required="true">
             </div>
 
             <label for="donation">Donation:</label>
-            <input type="text" name="donation" required><br>
+            <input type="text" name="donation" placeholder="Enter the item to be donated" required="true"><br>
 
             <label for="description">Description:</label>
-            <textarea id="w3review" name="description" rows="4" cols="50" required> </textarea><br>
+            <textarea id="w3review" name="description" rows="4" cols="50" placeholder="Enter description about the item to be donated" required="true"> </textarea><br>
 
             <input type="submit" name="upload" value="Submit" /><br>
 
@@ -71,4 +68,4 @@ if (isset($_POST['upload'])) {
 
 
 
-<?php include("../php/page_footer.php"); ?> 
+<?php include("../php/page_footer.php"); ?>
