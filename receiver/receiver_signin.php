@@ -62,11 +62,11 @@
               <form method="post">
                   <div class="form-group">
                     <label for="email" class="sr-only">Email</label>
-                    <input type="email" name="receiver_email" id="receiver_email" class="form-control" placeholder="Email address">
+                    <input type="email" name="receiver_email" id="receiver_email" class="form-control" placeholder="Email address" minlength="3" required>
                   </div>
                   <div class="form-group mb-4">
                     <label for="password" class="sr-only">Password</label>
-                    <input type="password" name="receiver_password" id="receiver_password" class="form-control" placeholder="Password">
+                    <input type="password" name="receiver_password" id="receiver_password" class="form-control" placeholder="Password" minlength="5" required>
                   </div>
                   <button name="login" id="login" class="btn btn-block login-btn mb-4" type="submit">
                     Sign In

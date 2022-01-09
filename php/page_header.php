@@ -43,7 +43,7 @@ if ($identifier == 0) {
                     <nav class="navbar navbar-expand-lg navbar-light">
                         <div class="container-fluid">
                             
-                            <a class="navbar-brand" href="index.php">
+                            <a class="navbar-brand" href="../php/index.php">
                                 WearIt
                                 <img src="">
                             </a>
@@ -111,7 +111,7 @@ if ($identifier == 0) {
                     <nav class="navbar navbar-expand-lg navbar-light">
                         <div class="container-fluid">
                             
-                            <a class="navbar-brand" href="index.php">
+                            <a class="navbar-brand" href="../php/index.php">
                                 WearIt
                                 <img src="">
                             </a>
@@ -236,7 +236,7 @@ if ($identifier == 0) {
                     <nav class="navbar navbar-expand-lg navbar-light">
                         <div class="container-fluid">
                             
-                            <a class="navbar-brand" href="index.php">
+                            <a class="navbar-brand" href="../php/index.php">
                                 WearIt
                                 <img src="">
                             </a>
@@ -319,7 +319,7 @@ if ($identifier == 0) {
                     <nav class="navbar navbar-expand-lg navbar-light">
                         <div class="container-fluid">
                             
-                            <a class="navbar-brand" href="index.php">
+                            <a class="navbar-brand" href="../php/index.php">
                                 WearIt
                                 <img src="">
                             </a>
@@ -484,7 +484,7 @@ if ($identifier == 0) {
                     <nav class="navbar navbar-expand-lg navbar-light">
                         <div class="container-fluid">
                             
-                            <a class="navbar-brand" href="index.php">
+                            <a class="navbar-brand" href="../php/index.php">
                                 WearIt
                                 <img src="">
                             </a>
@@ -567,7 +567,7 @@ if ($identifier == 0) {
                     <nav class="navbar navbar-expand-lg navbar-light">
                         <div class="container-fluid">
                             
-                            <a class="navbar-brand" href="index.php">
+                            <a class="navbar-brand" href="../php/index.php">
                                 WearIt
                                 <img src="">
                             </a>

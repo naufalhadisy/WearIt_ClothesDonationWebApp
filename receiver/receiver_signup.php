@@ -10,6 +10,7 @@ $name = $_POST['name'];
 $phonenum = $_POST['phone-number'];
 $email = $_POST['email'];
 $password = $_POST['password'];
+$confirm_pass = $_POST['confirm_pass'];
 
 $s = "select * from receiver where email = '$email'";
 
@@ -18,14 +19,21 @@ $result = mysqli_query($con, $s);
 $num = mysqli_num_rows($result);
 
 if (isset($_POST["login"])) {
+  
   if ($num == 1) {
     echo "<script>alert('Account already exist')</script>";
+    
   }else {
+    if($password === $confirm_pass){
       $reg = "insert into receiver (name, phonenum, email, password) values ('$name', '$phonenum', '$email', MD5('$password'))";
       mysqli_query($con, $reg);
       echo "<script>alert('Registration Successful')</script>";
       echo "<script>location.href='receiver_signin.php'</script>";
       header('Location:receiver_signin.php');
+  
+    }else{
+      echo "<script>alert('Please check your password again.')</script>";
+    }
   }
 }
 ?>
@@ -62,19 +70,23 @@ if (isset($_POST["login"])) {
               <form method="post">
                   <div class="form-group">
                     <label for="name" class="sr-only">Name</label>
-                    <input type="name" name="name" id="name" class="form-control" placeholder="Name">
+                    <input type="name" name="name" id="name" class="form-control" placeholder="Name" minlength="5" required>
                   </div>
                   <div class="form-group mb-4">
                     <label for="phone-number" class="sr-only">Phone Number</label>
-                    <input type="tel" name="phone-number" id="phone-number" class="form-control" placeholder="Phone No.">
+                    <input type="tel" name="phone-number" id="phone-number" class="form-control" placeholder="Phone No." minlength="8" required>
                   </div>
                   <div class="form-group">
                     <label for="email" class="sr-only">Email</label>
-                    <input type="email" name="email" id="email" class="form-control" placeholder="Email address">
+                    <input type="email" name="email" id="email" class="form-control" placeholder="Email address" minlength="3" required>
                   </div>
                   <div class="form-group">
                     <label for="password" class="sr-only">Password</label>
-                    <input type="password" name="password" id="password" class="form-control" placeholder="Password">
+                    <input type="password" name="password" id="password" class="form-control" placeholder="Password" minlength="5" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="password" class="sr-only">Confirm Password</label>
+                    <input type="password" name="confirm_pass" id="confirm_pass" class="form-control" placeholder="Confirm Password" minlength="5" required>
                   </div>
                   <button name="login" id="login" class="btn btn-block login-btn mb-4" type="submit">
                     Sign Up
