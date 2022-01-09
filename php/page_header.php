@@ -46,6 +46,7 @@ if (!isset($_SESSION['donor_email']) && !isset($_SESSION['receiver_email'])) {
                         <div class="container-fluid">
 
                             <a class="navbar-brand" href="index.php">
+
                                 WearIt
                                 <img src="">
                             </a>
@@ -191,9 +192,11 @@ if (!isset($_SESSION['donor_email']) && !isset($_SESSION['receiver_email'])) {
                                             </li>
                                             </ul>
 
+
                                         <?php } ?>
 
                                         </div>
+
                                     </div>
                                 </nav>
 
@@ -278,6 +281,7 @@ if (!isset($_SESSION['donor_email']) && !isset($_SESSION['receiver_email'])) {
                                                                     </ul>
                                                                 </div>
                                                             </li>
+
 
                                                             <li class="nav-item">
                                                                 <a class="nav-link" href="../php/forum.php">FORUM</a>
