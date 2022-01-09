@@ -13,10 +13,10 @@ if (isset($_POST['upload'])) {
     //getting the post values
     $description = $_POST['description'];
     $receiver = $_SESSION['receiver_name'];
-    $donator = $row['name'];
+    $donor = $row['name'];
 
     // Query for data insertion
-    $query = mysqli_query($con, "insert into request(donator, receiver, description) value('$donator','$receiver','$description')");
+    $query = mysqli_query($con, "insert into request(donor, receiver, description) value('$donor','$receiver','$description')");
     if ($query) {
         echo "<script>alert('You have successfully post the donation');</script>";
         echo "<script type='text/javascript'> document.location ='../donor/available.php'; </script>";
@@ -33,9 +33,10 @@ if (isset($_POST['upload'])) {
 <div class="main-container">
     <section class="s4">
         <div class="kain-container">
-            <h1>Donation</h1>
+            <h1>Donation</h1><br><br>
         </div>
         <div class="container">
+        <h4><?php echo $row['donation']; ?></h1><br>
             <div class="row">
                 <div class="col-md-12">
                     <form method="post" enctype="multipart/form-data">
@@ -47,15 +48,16 @@ if (isset($_POST['upload'])) {
                                 </div>
                             </div>
                             <div class="col-sm-7">
-                                <label for="donation">Donator Name:</label>
+                                <label for="donation">Donor Name:</label>
                                 <input type="text" name="name" value="<?php echo $row['name']; ?>" readonly><br>
-                                <label for="donation">Donator Email:</label>
+                                <label for="donation">Donor Email:</label>
                                 <input type="text" name="email" value="<?php echo $row['email']; ?>" readonly><br>
+                                <label for="donation">Donor Phone Number:</label>
+                                <input type="text" name="phonenum" value="<?php echo $row['PhoneNum']; ?>" readonly><br>
+                                <label for="donation">Description:</label>
+                                <textarea id="w3review" rows="4" cols="50" name="description" readonly><?php echo $row['description']; ?> </textarea><br>
 
-                                <label for="description">Messages:</label>
-                                <textarea id="w3review" name="description" rows="4" cols="50" placeholder="Enter description of word of request" required="true"> </textarea><br>
-
-                                <input type="submit" name="upload" value="Submit" /><br>
+                                <input type="submit" name="upload" value="Feedback" /><br>
                             </div>
                         </div>
                 </div>
