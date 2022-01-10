@@ -4,6 +4,10 @@ error_reporting(0);
 session_start();
 include("../php/page_header.php"); 
 include("../config.php");
+$id = $_GET['id'];
+$sql = "SELECT * FROM donation where id=$id";
+$result = mysqli_query($con, $sql);
+$row = mysqli_fetch_assoc($result);
 ?>
 
 </div>
@@ -20,10 +24,10 @@ include("../config.php");
                     <div class="hero-form">
                         <form method="post" id="messageform">
                             <label for="email">To</label>
-                            <input type="text" id="email" name="email"  placeholder="exampleTo@mail.com">
+                            <input type="text" id="email" name="email" value="<?php echo $row['email']; ?>">
 
                             <label for="email">From</label>
-                            <input type="text" id="email" name="email" placeholder="exampleFrom@mail.com">
+                            <input type="text" id="email" name="email" placeholder="example@mail.com">
                                     
                             <label for="name">Your Name</label>
                             <input type="text" id="name" name="fullname" placeholder="Put Your Name Here">

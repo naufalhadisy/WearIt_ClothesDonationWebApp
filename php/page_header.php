@@ -277,7 +277,7 @@ if (!isset($_SESSION['donor_email']) && !isset($_SESSION['receiver_email'])) {
                                                                         <div class="dropdown-divider"></div>
                                                                         <li><a href="../donor/donor_upload.php" class="dropdown-item">My Post</a></li>
                                                                         <div class="dropdown-divider"></div>
-                                                                        <li><a href="../donor/available.php" class="dropdown-item">Donation</a></li>
+                                                                        <li><a href="../php/available.php" class="dropdown-item">Donation</a></li>
                                                                     </ul>
                                                                 </div>
                                                             </li>
@@ -381,7 +381,7 @@ if (!isset($_SESSION['donor_email']) && !isset($_SESSION['receiver_email'])) {
                                                                                         <div class="dropdown-divider"></div>
                                                                                         <li><a href="../donor/donor_upload.php" class="dropdown-item">My Post</a></li>
                                                                                         <div class="dropdown-divider"></div>
-                                                                                        <li><a href="../donor/available.php" class="dropdown-item">Donation</a></li>
+                                                                                        <li><a href="../php/available.php" class="dropdown-item">Donation</a></li>
                                                                                     </ul>
                                                                                 </div>
                                                                             </li>
@@ -431,7 +431,7 @@ if (!isset($_SESSION['donor_email']) && !isset($_SESSION['receiver_email'])) {
                                                                                 <div class="dropdown-divider"></div>
                                                                                 <li><a href="../donor/donor_upload.php" class="dropdown-item">My Post</a></li>
                                                                                 <div class="dropdown-divider"></div>
-                                                                                <li><a href="../donor/available.php" class="dropdown-item">Donation</a></li>
+                                                                                <li><a href="../php/available.php" class="dropdown-item">Donation</a></li>
                                                                             </ul>
                                                                         </div>
                                                                     </li>
@@ -482,7 +482,7 @@ if (!isset($_SESSION['donor_email']) && !isset($_SESSION['receiver_email'])) {
                                                                                 <div class="dropdown-divider"></div>
                                                                                 <li><a href="../donor/donor_upload.php" class="dropdown-item">My Post</a></li>
                                                                                 <div class="dropdown-divider"></div>
-                                                                                <li><a href="../donor/available.php" class="dropdown-item">Donation</a></li>
+                                                                                <li><a href="../php/available.php" class="dropdown-item">Donation</a></li>
                                                                             </ul>
                                                                         </div>
                                                                     </li>
@@ -581,7 +581,7 @@ if (!isset($_SESSION['donor_email']) && !isset($_SESSION['receiver_email'])) {
                                                                                         <a class="nav-link active" aria-current="page" href="../php/index.php">HOME</a>
                                                                                     </li>
                                                                                     <li class="nav-item">
-                                                                                        <a class="nav-link" href="../donor/available.php">DONATION</a>
+                                                                                        <a class="nav-link" href="../php/available.php">DONATION</a>
                                                                                     </li>
                                                                                     <li class="nav-item">
                                                                                         <a class="nav-link" href="../php/forum.php">FORUM</a>
@@ -668,7 +668,7 @@ if (!isset($_SESSION['donor_email']) && !isset($_SESSION['receiver_email'])) {
                                                                                                         <a class="nav-link" aria-current="page" href="../php/index.php">HOME</a>
                                                                                                     </li>
                                                                                                     <li class="nav-item">
-                                                                                                        <a class="nav-link active" href="../donor/available.php">DONATION</a>
+                                                                                                        <a class="nav-link active" href="../php/available.php">DONATION</a>
                                                                                                     </li>
                                                                                                     <li class="nav-item">
                                                                                                         <a class="nav-link" href="../php/forum.php">FORUM</a>
@@ -704,7 +704,7 @@ if (!isset($_SESSION['donor_email']) && !isset($_SESSION['receiver_email'])) {
                                                                                                 <a class="nav-link" aria-current="page" href="../php/index.php">HOME</a>
                                                                                             </li>
                                                                                             <li class="nav-item">
-                                                                                                <a class="nav-link" href="../donor/available.php">DONATION</a>
+                                                                                                <a class="nav-link" href="../php/available.php">DONATION</a>
                                                                                             </li>
                                                                                             <li class="nav-item">
                                                                                                 <a class="nav-link active" href="../php/forum.php">FORUM</a>
@@ -740,7 +740,7 @@ if (!isset($_SESSION['donor_email']) && !isset($_SESSION['receiver_email'])) {
                                                                                                 <a class="nav-link" aria-current="page" href="../php/index.php">HOME</a>
                                                                                             </li>
                                                                                             <li class="nav-item">
-                                                                                                <a class="nav-link" href="../donor/available.php">DONATION</a>
+                                                                                                <a class="nav-link" href="../php/available.php">DONATION</a>
                                                                                             </li>
                                                                                             <li class="nav-item">
                                                                                                 <a class="nav-link" href="../php/forum.php">FORUM</a>
