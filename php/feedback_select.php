@@ -31,11 +31,16 @@ $row = mysqli_fetch_assoc($result);
                                     
                             <label for="name">Your Name</label>
                             <input type="text" id="name" name="fullname" placeholder="Put Your Name Here">
+
+                            <label for="picture">Picture</label>
+                            <div class="form-group">
+                            <input type="file" class="form-control" name="picture" multiple required="true">
+                            </div>
                                     
                             <label for="message">Feedback Message</label>
                             <textarea id="message" name="message" placeholder="Leave message here" style="height:100px"></textarea>
 
-                            <button name="submit" type="submit" id="btnsubmit" class="btn bg-violet text-light">Submit</button>
+                            <button class="btn btn-info" name="submit" type="submit" id="btnsubmit" class="btn bg-violet text-light">Submit</button>
                         </form>
 
                         <br>
