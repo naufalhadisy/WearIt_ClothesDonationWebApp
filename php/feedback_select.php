@@ -49,6 +49,28 @@ $row = mysqli_fetch_assoc($result);
             </div>
         </section>
 
+<section class="s4">
+    <div class="main-container">
+    <div class="kain-container">
+            <h1>All Feedback</h1>
+        </div>
+            
+            <div class="card">
+                <div class="card-header">
+                    Feedback from 
+                </div>
+                <div class="card-body">
+                    <blockquote class="blockquote mb-0">
+                        <p>Donor is humble and responsive, thanks for the shirt, have a great day</p>
+                        <footer class="blockquote-footer">11/1/2022 <cite title="Source Title">Reply</cite></footer>
+                    </blockquote>
+                </div>
+            </div>
+
+        
+
+    </div>
+</section>
 
 
 

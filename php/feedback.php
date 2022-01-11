@@ -30,6 +30,11 @@ include("../config.php");
                     <label for="name">Your Name</label>
                     <input type="text" id="name" name="fullname" placeholder="Put Your Name Here">
 
+                    <label for="picture">Picture</label>
+                    <div class="form-group">
+                    <input type="file" class="form-control" name="picture" multiple required="true">
+                    </div>
+
                     <label for="message">Feedback Message</label>
                     <textarea id="message" name="message" placeholder="Leave message here" style="height:100px"></textarea>
 
@@ -53,12 +58,12 @@ include("../config.php");
             
             <div class="card">
                 <div class="card-header">
-                    Feedback from 
+                    Ammar Hawari 
                 </div>
                 <div class="card-body">
                     <blockquote class="blockquote mb-0">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-                        <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
+                        <p>Donor is humble and responsive, thanks for the shirt, have a great day</p>
+                        <footer class="blockquote-footer">11/1/2022 <cite title="Source Title">Reply</cite></footer>
                     </blockquote>
                 </div>
             </div>
