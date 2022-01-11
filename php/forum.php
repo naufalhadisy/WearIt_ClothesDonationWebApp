@@ -53,8 +53,7 @@ include('dbconnection.php');?>
 							<hr>
 							
 							<a><?php echo $row['content']; ?></a>
-							<img src="img/<?php echo $row['topicFile']; ?>" style="width:100%">
-						 <a style="color: blue"; href="#">Read more...</a>
+							<img src="../img/<?php echo $row['contentfile']; ?>" style="width:50%">
 					
 					<hr>		
 					<p class="row justify-content-left"><span class="badge badge-success text-white"><i>  Posted By: <?php echo $row['postedby'];?> </i></span></p>
