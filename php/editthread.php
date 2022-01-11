@@ -21,7 +21,7 @@ if (isset($_POST['submit'])) {
         //rename the image file
         $imgnewfile = md5($imgfile) . time() . $extension;
         // Code for move image into directory
-        move_uploaded_file($_FILES["contentFile"]["tmp_name"], "img/" . $imgnewfile);
+        move_uploaded_file($_FILES["contentFile"]["tmp_name"], "../img/" . $imgnewfile);
         // Query for data insertion
         $query = mysqli_query($con, "update topics SET contentFile = '$imgnewfile', title = '$title', content = '$content', postedby = '$name', category = '$category' where id = '$ID'");
         if ($query) {
