@@ -58,8 +58,9 @@ include('dbconnection.php');?>
 					
 					<hr>		
 					<p class="row justify-content-left"><span class="badge badge-success text-white"><i>  Posted By: <?php echo $row['postedby'];?> </i></span></p>
-					<span><button type="button" class="btn btn-info"> <a href="editthread.php?id=<?php echo $row['id']; ?>">Edit</button></span></a>
-								<hr>
+					<a  href="editthread.php?id=<?php echo $row['id']; ?>"><span><button type="button" class="btn btn-info"> Edit</button></span></a>
+					<a  href=#><span><button type="button" class="btn btn-danger"> Delete</button></span></a>
+					<hr>
 									<span class="float-right">
 									<span>Tags:  </span>
 									<span class="badge badge-info text-white ml-2"><?php echo $row['category']; ?></span>
