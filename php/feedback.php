@@ -6,7 +6,10 @@ include("../php/page_header.php");
 include("../config.php");
 ?>
 
+
 </div>
+
+
 <section class="s5">
     <div class="main-container">
         <div class="content-wrapper-contact">
@@ -45,26 +48,60 @@ include("../config.php");
 
 <section class="s4">
     <div class="main-container">
-    <div class="kain-container">
+        <div class="kain-container">
             <h1>All Feedback</h1>
         </div>
-            
-            <div class="card">
-                <div class="card-header">
-                    Feedback from 
-                </div>
-                <div class="card-body">
-                    <blockquote class="blockquote mb-0">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-                        <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
-                    </blockquote>
-                </div>
-            </div>
 
-        
+        <div class="card">
+            <div class="card-header">
+                Feedback from Ammar Hawari
+            </div>
+            <div class="card-body">
+                <blockquote>
+                    <p>Donor is humble and responsive, thanks for the shirt, have a great day!</p>
+                    
+                </blockquote>
+                <hr>
+
+                <div id='buttons' style="display: flex; width: 150px; justify-content: space-between;">
+                    <button id="show" type="button" class="btn btn-primary rep">Reply</button>
+                    <button id='hide' type="button" class="btn btn-primary rep" style="display: none;">Close</button>
+                </div>
+                <form id='form' style="display: none;">
+                    <textarea id='textarea'></textarea>
+                </form>
+                <button type="submit" id="send" form = "form" class="btn btn-primary" style="display: none;">Submit</button>
+            </div>
+        </div>
+
+
 
     </div>
 </section>
+
+<script>
+    var show = document.getElementById('show');
+    var hide = document.getElementById('hide');
+    var form = document.getElementById('form');
+    var send = document.getElementById('send');
+    var textarea = document.getElementById('textarea');
+
+    show.addEventListener('click', function() {
+        form.style = ('display: block');
+        textarea.style = ('animation: riseHeight 1s .1s normal forwards');
+        hide.style = ('display: block');
+        send.style = ('display: block');
+        show.disabled = true;
+    })
+
+    hide.addEventListener('click', function() {
+        form.style = ('display: none');
+        hide.style = ('display: none');
+        send.style = ('display: none');
+        show.disabled = false;
+    })
+</script>
+
 
 
 
