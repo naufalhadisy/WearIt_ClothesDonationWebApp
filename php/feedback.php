@@ -54,12 +54,12 @@ include("../config.php");
 
         <div class="card">
             <div class="card-header">
-                Feedback from Ammar Hawari
+                Ammar Hawari
             </div>
             <div class="card-body">
                 <blockquote>
                     <p>Donor is humble and responsive, thanks for the shirt, have a great day!</p>
-                    
+                        <footer class="blockquote-footer">11/1/2022</footer>
                 </blockquote>
                 <hr>
 
