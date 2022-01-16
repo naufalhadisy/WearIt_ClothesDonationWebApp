@@ -78,9 +78,10 @@ if (isset($_POST['update'])) {
                 ?>
                     <div class="card mb-4">
                         <div class="card-header">
-                            <?php
+                        <img src="../img/avatar.png" alt="Avatar" class="float-left margin-right" style="width:30px">
+                            <h3>&nbsp;<?php
                             echo $rows["fullname"]
-                            ?>
+                            ?></h3>
                         </div>
                         <div class="card-body">
                             <div class="media-body">
