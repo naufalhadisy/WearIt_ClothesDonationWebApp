@@ -4,7 +4,27 @@ error_reporting(0);
 session_start();
 include("../php/page_header.php");
 include("../config.php");
+if (isset($_POST['submit'])) {
+    $name = $_POST['fullname'];
+    $email1 = $_POST['email1'];
+    $email2 = $_POST['email2'];
+    $message = $_POST['message'];
+    date_default_timezone_set('Asia/Jakarta');
+    $date = date('Y/m/d H:i:s');
+    $query = mysqli_query($con, "INSERT INTO feedback(toEmail, fromEmail, message, fullname, date) VALUE ('$email1','$email2','$message','$name', '$date')");
+}
+$sql = "SELECT * FROM feedback";
+$result = mysqli_query($con, $sql);
+
+if (isset($_POST['update'])) {
+    $reply = $_POST['reply'];
+    $id = $_POST['id'];
+    $query = mysqli_query($con, "UPDATE feedback SET reply = '$reply' WHERE id = '$id'");
+    header("Refresh:2");
+}
+
 ?>
+
 
 
 </div>
@@ -23,10 +43,10 @@ include("../config.php");
             <div class="hero-form">
                 <form method="post" id="messageform">
                     <label for="email">To</label>
-                    <input type="text" id="email" name="email" placeholder="exampleTo@mail.com">
+                    <input type="text" id="email" name="email1" placeholder="exampleTo@mail.com">
 
                     <label for="email">From</label>
-                    <input type="text" id="email" name="email" placeholder="exampleFrom@mail.com">
+                    <input type="text" id="email" name="email2" placeholder="exampleFrom@mail.com">
 
                     <label for="name">Your Name</label>
                     <input type="text" id="name" name="fullname" placeholder="Put Your Name Here">
@@ -34,7 +54,7 @@ include("../config.php");
                     <label for="message">Feedback Message</label>
                     <textarea id="message" name="message" placeholder="Leave message here" style="height:100px"></textarea>
 
-                    <button name="submit" type="submit" id="btnsubmit" class="btn bg-violet text-light">Submit</button>
+                    <input type="submit" name="submit" value="Submit" />
                 </form>
 
                 <br>
@@ -46,38 +66,53 @@ include("../config.php");
     </div>
 </section>
 
-<section class="s4">
-    <div class="main-container">
-        <div class="kain-container">
-            <h1>All Feedback</h1>
-        </div>
+<div class="main-container">
+    <section class="s2">
+        <h1>All Feedback</h1>
+        <div class="form-group">
+            <tbody>
+                <?php
+                while ($rows = mysqli_fetch_assoc($result)) {
 
-        <div class="card">
-            <div class="card-header">
-                Ammar Hawari
-            </div>
-            <div class="card-body">
-                <blockquote>
-                    <p>Donor is humble and responsive, thanks for the shirt, have a great day!</p>
-                        <footer class="blockquote-footer">11/1/2022</footer>
-                </blockquote>
-                <hr>
+                ?>
+                    <div class="card">
+                        <div class="card-header">
+                            <?php
+                            echo $rows["fullname"]
+                            ?>
+                        </div>
+                        <div class="card-body">
+                            <blockquote>
+                                <p><?php echo $rows["message"] ?></p>
+                                <footer class="blockquote-footer"><?php echo $rows["date"] ?></footer>
+                            </blockquote>
+                            <hr>
+                            <?php if ($rows["reply"] == NULL) { ?>
+                                <div id='buttons' style="display: flex; width: 150px; justify-content: space-between;">
+                                    <button id="show" type="button" class="btn btn-primary rep"><i class="fa fa-reply"></i> Reply</button>
+                                    <button id='hide' type="button" class="btn btn-primary rep" style="display: none;">Close</button>
+                                </div>
+                                <form id='form' method="post" style="display: none;">
+                                    <input type="hidden" name="id" value="<?php echo $rows["id"] ?>">
+                                    <textarea id='message' name="reply"></textarea>
+                                    <input type="submit" name="update" value="Submit" />
+                                </form>
+                            <?php } else {
+                                echo $rows["reply"];
+                            } ?>
+                        </div>
+                    </div>
+        
+    <?php
+                }
+    ?>
 
-                <div id='buttons' style="display: flex; width: 150px; justify-content: space-between;">
-                    <button id="show" type="button" class="btn btn-primary rep">Reply</button>
-                    <button id='hide' type="button" class="btn btn-primary rep" style="display: none;">Close</button>
-                </div>
-                <form id='form' style="display: none;">
-                    <textarea id='textarea'></textarea>
-                </form>
-                <button type="submit" id="send" form = "form" class="btn btn-primary" style="display: none;">Submit</button>
-            </div>
-        </div>
-
-
-
-    </div>
+    </tbody>
+</div>
 </section>
+</div>
+
+</div>
 
 <script>
     var show = document.getElementById('show');
