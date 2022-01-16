@@ -57,7 +57,7 @@ if (isset($_POST['upload'])) {
             <input type="text" name="donation" placeholder="Enter the item to be donated" required="true"><br>
 
             <label for="description">Description:</label>
-            <textarea id="w3review" name="description" rows="4" cols="50" placeholder="Enter description about the item to be donated" required="true"> </textarea><br>
+            <textarea id="message" name="description" placeholder="Enter description about the item to be donated" style="height:100px" required="true"></textarea><br>
 
             <input type="submit" name="upload" value="Submit" /><br>
 
