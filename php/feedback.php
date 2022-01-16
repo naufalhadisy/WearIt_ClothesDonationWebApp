@@ -72,25 +72,28 @@ if (isset($_POST['update'])) {
         <div class="form-group">
             <tbody>
                 <?php
+
                 while ($rows = mysqli_fetch_assoc($result)) {
 
                 ?>
-                    <div class="card">
+                    <div class="card mb-4">
                         <div class="card-header">
                             <?php
                             echo $rows["fullname"]
                             ?>
                         </div>
                         <div class="card-body">
-                            <blockquote>
-                                <p><?php echo $rows["message"] ?></p>
-                                <footer class="blockquote-footer"><?php echo $rows["date"] ?></footer>
-                            </blockquote>
+                            <div class="media-body">
+                                <blockquote>
+                                    <p><?php echo $rows["message"] ?></p>
+                                    <footer class="blockquote-footer"><?php echo $rows["date"] ?></footer>
+                                </blockquote>
+                            </div>
                             <hr>
                             <?php if ($rows["reply"] == NULL) { ?>
                                 <div id='buttons' style="display: flex; width: 150px; justify-content: space-between;">
-                                    <button id="show" type="button" class="btn btn-primary rep"><i class="fa fa-reply"></i> Reply</button>
-                                    <button id='hide' type="button" class="btn btn-primary rep" style="display: none;">Close</button>
+                                    <button id="show" type="button" class="btn btn-outline-secondary"><i class="fa fa-reply"></i> Reply</button>
+                                    <button id='hide' type="button" class="btn btn-outline-secondary" style="display: none;">Close</button>
                                 </div>
                                 <form id='form' method="post" style="display: none;">
                                     <input type="hidden" name="id" value="<?php echo $rows["id"] ?>">
@@ -102,14 +105,13 @@ if (isset($_POST['update'])) {
                             } ?>
                         </div>
                     </div>
-        
-    <?php
+                <?php
                 }
-    ?>
+                ?>
 
-    </tbody>
-</div>
-</section>
+            </tbody>
+        </div>
+    </section>
 </div>
 
 </div>
