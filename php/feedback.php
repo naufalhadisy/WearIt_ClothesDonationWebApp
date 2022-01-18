@@ -1,8 +1,10 @@
-<?php
+
+<?php 
 $identifier = 3;
 error_reporting(0);
 session_start();
-include("../php/page_header.php");
+include("../php/page_header.php"); 
+
 include("../config.php");
 if (isset($_POST['submit'])) {
     $name = $_POST['fullname'];
@@ -50,6 +52,11 @@ if (isset($_POST['update'])) {
 
                     <label for="name">Your Name</label>
                     <input type="text" id="name" name="fullname" placeholder="Put Your Name Here">
+
+                    <label for="picture">Picture</label>
+                    <div class="form-group">
+                    <input type="file" class="form-control" name="picture" multiple required="true">
+                    </div>
 
                     <label for="message">Feedback Message</label>
                     <textarea id="message" name="message" placeholder="Leave message here" style="height:100px"></textarea>
@@ -112,8 +119,10 @@ if (isset($_POST['update'])) {
 
             </tbody>
         </div>
+
     </section>
 </div>
+
 
 </div>
 
