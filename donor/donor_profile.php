@@ -2,10 +2,13 @@
 $identifier = 0;
 include("../php/page_header.php");
 include("../config.php");
+
 error_reporting(0);
+
 $account = $_SESSION["donor_email"];
 ?>
-
+<div class="main-container">
+    
         <section class="s6">
             <div class="main-container">
                 <div class="hero-centertitle">
@@ -36,6 +39,9 @@ $account = $_SESSION["donor_email"];
                     <br>
                     <br>
                     <a class="btn btn-info" href="donor_edit_profile.php">Edit Profile</a>
-                    <a class="btn btn-warning" href="donor_delete_confirmation.php">Delete Profile</a>           
+                    <a class="btn btn-danger">Delete Profile</a>           
         </section>
+
+        </div>
+        </div>
 <?php include("../php/page_footer.php"); ?>           
