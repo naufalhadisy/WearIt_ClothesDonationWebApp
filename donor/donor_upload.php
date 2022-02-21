@@ -59,10 +59,6 @@ include("../config.php");
 
                                         </div>
                                     </div>
-
-
-                                    <hr>
-                                    <button type="button" class="btn btn-outline-secondary"><i class="fa fa-comment"></i> Comment</button>
                                 </li>
                         </div>
                         <!--Fetch the Records -->

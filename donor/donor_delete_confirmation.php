@@ -5,7 +5,7 @@ include("../config.php");
 error_reporting(0);
 $account = $_SESSION["donor_email"];
 ?>
-
+<div class="main-container">
 <section class="s6">
             <div class="main-container">
                 <div class="hero-centertitle">
@@ -31,5 +31,5 @@ $account = $_SESSION["donor_email"];
             <?php 
              }}?>
 </section>
-
+</div></div>
 <?php include("../php/page_footer.php"); ?>            

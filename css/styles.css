@@ -41,11 +41,11 @@ a {
     background-color: #fff;
 }
 .s1 {
-    background-image: url("../img/wearit-logo.png");
+   /*background-image: url("../img/wearit-logo.png");*/
     background-repeat: no-repeat;
     background-size: auto;
     overflow: auto;
-    background-color: #F2F2F0;
+    background-color: ##ffffff;
 }
 .s2 {
     background-color: #fff;

@@ -22,22 +22,22 @@ if (isset($_POST['save'])) {
   }
 }
 ?>
-
-<section class="s6">
-  <div class="main-container">
-    <div class="hero-title">
-      <div class="bg-white p-3 border rounded" style="width: 450px;">
-        <form method="POST" action="">
-          <?php
-           $ret = mysqli_query($con, "SELECT * FROM donor WHERE Email = '$account'");
-           $cnt = 1;
-           $row = mysqli_num_rows($ret);
-           if ($row > 0) {
-               while ($row = mysqli_fetch_array($ret)) {
+<div class="main-container">
+  <section class="s6">
+    <div class="main-container">
+      <div class="hero-title">
+        <div class="bg-white p-3 border rounded" style="width: 450px;">
+          <form method="POST" action="">
+            <?php
+            $ret = mysqli_query($con, "SELECT * FROM donor WHERE Email = '$account'");
+            $cnt = 1;
+            $row = mysqli_num_rows($ret);
+            if ($row > 0) {
+              while ($row = mysqli_fetch_array($ret)) {
                 //print_r($row);
-          ?>
+            ?>
                 <table style="border: none;">
-                <h5 style="text-align: center">Edit Profile</h5><br>
+                  <h5 style="text-align: center">Edit Profile</h5><br>
                   <tr>
                     <td style="border: none; text-align: left;">Name</td>
                     <td style="border: none;">: </td>
@@ -55,16 +55,21 @@ if (isset($_POST['save'])) {
                   <tr>
                 </table>
                 <button class="btn btn-success" type="submit" name="save" value="Submit">Save</button>
-          <?php
-          $cnt = $cnt + 1;
+            <?php
+                $cnt = $cnt + 1;
               }
             }
-          ?>
-        </form>
+            ?>
+          </form>
+        </div>
+        <br>
+        <div class="hero-subtitle">
+          <a class="btn btn-info" href="donor_changepass.php">Change Password</a>
+        </div>
       </div>
-      <br>
-      <div class="hero-subtitle">
-      <a class="btn btn-info" href="donor_changepass.php">Change Password</a>
-      </div>
+
     </div>
-    <?php include("../php/page_footer.php"); ?>       
+  </section>
+</div>
+          </div>
+<?php include("../php/page_footer.php"); ?>

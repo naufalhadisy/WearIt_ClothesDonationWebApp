@@ -1,7 +1,7 @@
 <?php
 $identifier = 2;
 include("page_header.php");
-include('dbconnection.php'); 
+include('dbconnection.php');
 if (isset($_POST['submit'])) {
     //getting the post values
     $contentFile = $_FILES['contentFile']['name'];
@@ -12,7 +12,7 @@ if (isset($_POST['submit'])) {
     // get the image extension
     $extension = substr($contentFile, strlen($contentFile) - 4, strlen($contentFile));
     // allowed extensions
-    $allowed_extensions = array(".jpg", "jpeg", ".png", ".gif",".PNG");
+    $allowed_extensions = array(".jpg", "jpeg", ".png", ".gif", ".PNG");
     // Validation for allowed extensions .in_array() function searches an array for a specific value.
     if (!in_array($extension, $allowed_extensions)) {
         echo "<script>alert('Invalid format. Only jpg / jpeg/ png /gif format allowed');</script>";
@@ -32,9 +32,9 @@ if (isset($_POST['submit'])) {
     }
 }
 ?>
-
-<section class="s2">
-    <div class="main-container">
+<div class="main-container">
+    <section class="s2">
+        <div class="main-container">
             <h1>New Thread</h1>
 
             <form method="post" enctype="multipart/form-data">
@@ -52,10 +52,12 @@ if (isset($_POST['submit'])) {
 
                 <label for="picture">Picture:</label>
                 <input type="file" name="contentFile" required><br>
-            <br>
+                <br>
                 <input type="submit" name="submit" value="Submit" />
             </form>
-  
-    </div>
-</section>
-<?php include("page_footer.php"); ?>  
+
+        </div>
+    </section>
+</div>
+</div>
+<?php include("page_footer.php"); ?>

@@ -52,13 +52,13 @@ include('dbconnection.php');?>
 						<h2><?php echo $row['title']; ?></h2>
 							<hr>
 							
-								<a><?php echo $row['content']; ?></a><br>
+							<a><?php echo $row['content']; ?></a><br>
 							<img src="../img/<?php echo $row['contentfile']; ?>" style="width:30%">
 					
 					<hr>		
 					<p class="row justify-content-left"><span class="badge badge-success text-white"><i>  Posted By: <?php echo $row['postedby'];?> </i></span></p>
 					<a  href="editthread.php?id=<?php echo $row['id']; ?>"><span><button type="button" class="btn btn-info"> Edit</button></span></a>
-					<a  href=#><span><button type="button" class="btn btn-danger"> Delete</button></span></a>
+					<a  href="../php/delete_forum.php?id=<?php echo $row['id']; ?>"><span><button type="button" class="btn btn-danger"> Delete</button></span></a>
 					<hr>
 									<span class="float-right">
 									<span>Tags:  </span>

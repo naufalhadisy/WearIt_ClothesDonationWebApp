@@ -13,13 +13,17 @@
   $s = "select * from donor where email = '$email' && password = '".md5($password)."'";
 
   $result = mysqli_query($con, $s);
-
+  $rows=mysqli_fetch_assoc($result);
+  $donor_name=$rows["Name"];
+  $donor_PhoneNum=$rows["PhoneNum"];
   $num = mysqli_num_rows($result);
   
   if (isset($email) && isset($password)) {
     if ($num == 1)
     {
-      $_SESSION['donor_email'] = $_POST['donor_email']; 
+      $_SESSION['donor_email'] = $_POST['donor_email'];
+      $_SESSION['donor_name'] = $donor_name;
+      $_SESSION['donor_PhoneNum'] = $donor_PhoneNum;
       header('Location:../php/index.php'); 
     }
     else {
@@ -62,11 +66,11 @@
               <form method="post">
                   <div class="form-group">
                     <label for="email" class="sr-only">Email</label>
-                    <input type="email" name="donor_email" id="donor_email" class="form-control" placeholder="Email address" minlength="3" required>
+                    <input type="email" name="donor_email" id="donor_email" class="form-control" placeholder="Email address">
                   </div>
                   <div class="form-group mb-4">
                     <label for="password" class="sr-only">Password</label>
-                    <input type="password" name="donor_password" id="donor_password" class="form-control" placeholder="Password" minlength="5" required>
+                    <input type="password" name="donor_password" id="donor_password" class="form-control" placeholder="Password">
                   </div>
                   <button name="login" id="login" class="btn btn-block login-btn mb-4" type="submit">
                     Sign In
